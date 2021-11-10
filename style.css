@@ -50,14 +50,16 @@ img {
 .navbar-nav {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     height: 100%;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 
 .dropdown {
     position: absolute;
-    width: 500px;
+    width: 8rem;
     opacity: 0;
     z-index: 2;
     background: var(--bg-dropdown);
@@ -67,10 +69,12 @@ img {
     border-bottom-left-radius: 8px;
     
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: space-around;
-    height: 3rem;
+    height: 5rem;
     margin-top: 2rem;
+    margin-right: 5rem;
     padding: 0.5rem;
    
     box-shadow: rgba(2, 8, 20, 0.1) 0px 0.175em 0.5em;
@@ -110,35 +114,33 @@ img {
 
 
 :root {
-    --gray0: #f8f8f8;
-    --gray1: #dbe1e8;
-    --gray2: #b2becd;
-    --gray3: #6c7983;
+    --orange0: #f4a261;
+    --orange1: #ffba08;
+    --orange2: #faa307;
+    --orange3: #fb8500;
     --gray4: #454e56;
     --gray5: #2a2e35;
     --gray6: #12181b;
-    --blue: #0084a5;
-    --purple: #a82dd1;
+    --blue: #264653;
+    --purple: #3c096c;
     --yellow: #fff565;
 }
 
 .light {
-    --bg: var(--gray0);
-    --bg-nav: linear-gradient(to right, var(--gray1), var(--gray3));
-    --bg-dropdown: var(--gray0);
+    --bg: linear-gradient(to right, var(--orange1), var(--orange3));
+    --bg-nav: linear-gradient(to right, var(--orange1), var(--orange3));
+    --bg-dropdown: var(--orange0);
     --text: var(--gray6);
     --border-color: var(--blue);
-    --bg-solar: var(--yellow);
 }
   
 
 .dark {
     --bg: var(--gray5);
-    --bg-nav: linear-gradient(to right, var(--gray5), var(--gray6));
+    --bg-nav: var(--gray5);
     --bg-dropdown: var(--gray6);
-    --text: var(--gray0);
+    --text: var(--orange0);
     --border-color: var(--purple);
-    --bg-solar: var(--blue);
 }
 
 #dark::before {
